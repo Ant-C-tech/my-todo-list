@@ -22,7 +22,7 @@ export const AddTodoForm = () => {
     <Container>
       <Form onSubmit={onSubmit}>
         <Row className='align-items-end'>
-          <Col lg={11} md={10} sm={9}>
+          <Col lg={10} md={10} sm={10}>
             <Form.Group className='mb-3 mr-3'>
               <Form.Label>Add New ToDo</Form.Label>
               <Form.Control
@@ -33,8 +33,13 @@ export const AddTodoForm = () => {
               />
             </Form.Group>
           </Col>
-          <Col lg={1} md={2} sm={3} >
-            <Button className='mb-3' variant='primary' type='submit'>
+          <Col lg={2} md={2} sm={2} className='text-end'>
+            <Button
+              className='mb-3'
+              variant='primary'
+              type='submit'
+              disabled={value === ''}
+            >
               Submit
             </Button>
           </Col>

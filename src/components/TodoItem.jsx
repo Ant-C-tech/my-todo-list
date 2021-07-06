@@ -15,25 +15,25 @@ export const TodoItem = ({ id, title, completed }) => {
   };
 
   return (
-    <ListGroup.Item variant={completed ? "success" : "warning"}>
-      <Row className='align-items-center'>
-        <Col lg={10} sm={9}>
-          <div className='d-flex'>
-            <Form.Check
-              type='checkbox'
-              className='d-block mr-3'
-              checked={completed}
-              onChange={onChangeStatus}
-            />
-            <p className='w-100 mb-0'>{title}</p>
-          </div>
-        </Col>
-        <Col lg={2} sm={3} className='text-end'>
-          <Button variant='danger' onClick={onDelete}>
-            Delete
-          </Button>
-        </Col>
-      </Row>
-    </ListGroup.Item>
+      <ListGroup.Item variant={completed ? "success" : "warning"}>
+        <Row className='align-items-center'>
+          <Col lg={10} sm={9}>
+            <div className='d-flex'>
+              <Form.Check
+                type='checkbox'
+                className='d-block mr-3'
+                checked={completed}
+                onChange={onChangeStatus}
+              />
+              <p className='w-100 mb-0'>{title}</p>
+            </div>
+          </Col>
+          <Col lg={2} sm={3} className='text-end'>
+            <Button variant='danger' onClick={onDelete}>
+              Delete
+            </Button>
+          </Col>
+        </Row>
+      </ListGroup.Item>
   );
 };

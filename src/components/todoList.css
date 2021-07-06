@@ -1,0 +1,23 @@
+.item-enter {
+  opacity: 0;
+  transform: translate3d(-25%, 0px, 0px);
+}
+
+.item-enter-active {
+  opacity: 1;
+  transform: translate3d(0%, 0px, 0px)
+}
+
+.item-exit {
+  opacity: 1;
+  transform: translate3d(0%, 0px, 0px)
+}
+
+.item-exit-active {
+  opacity: 0;
+  transform: translate3d(25%, 0px, 0px);
+}
+
+.list-group-item {
+  transition: all ease-in-out .5s;
+}
